@@ -103,6 +103,8 @@ def main():
                 print("\n❌ Entrada inválida. Por favor, digite um número.")
         elif escolha == '4':
             listar_tarefas(lista_de_tarefas)
+        elif escolha == '5':
+            editar_tarefa(lista_de_tarefas)
             try:
                 indice = int(input("Digite o número da tarefa para remover: "))
                 remover_tarefa(lista_de_tarefas, indice)
