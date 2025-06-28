@@ -30,6 +30,22 @@ def listar_tarefas(tarefas):
 def editar_tarefa(tarefas):
      #edita a descriçao de uma tarefa existente  
     listar_tarefas(tarefas) 
+    try:
+        indice = int(input("digite o numero da tarefa que deseja editar: "))
+        indice_real = indice - 1
+        if 0 <= indice_real < len(tarefas):
+            atual = tarefas[indice_real]["descricao"]
+            print(f"descriçao atual: {atual}")
+            nova = input("digite a nova descriçao: ")
+            if nova.strip():
+                tarefas[indice_real]["descricao"] = nova
+                print(f"\n tarefa atualzada co sucesso")
+            else:
+                print("\n a nova descriçao nao pode ser vazia.")
+        else:
+            print("\n indice invalido.")
+    except ValueError:
+        print("\n entrada invalida, digite um numero")
 
 def marcar_como_concluida(tarefas, indice):
     """Marca uma tarefa como concluída com base no seu índice na lista."""
