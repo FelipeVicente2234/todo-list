@@ -27,6 +27,10 @@ def listar_tarefas(tarefas):
             print(f"{i + 1}. {status} {tarefa['descricao']}[Prioridade: {tarefa['prioridade']}]")
     print("--------------------------")
 
+def editar_tarefa(tarefas):
+     #edita a descriçao de uma tarefa existente  
+    listar_tarefas(tarefas) 
+
 def marcar_como_concluida(tarefas, indice):
     """Marca uma tarefa como concluída com base no seu índice na lista."""
     # O índice do usuário começa em 1, mas o da lista em 0
