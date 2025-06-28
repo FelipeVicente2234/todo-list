@@ -24,7 +24,7 @@ def listar_tarefas(tarefas):
         for i, tarefa in enumerate(tarefas):
             status = "✅" if tarefa["concluida"] else "◻️"
             # O 'i + 1' é para mostrar um índice amigável ao usuário (começando em 1)
-            print(f"{i + 1}. {status} {tarefa['descricao']}")
+            print(f"{i + 1}. {status} {tarefa['descricao']}[Prioridade: {tarefa['prioridade']}]")
     print("--------------------------")
 
 def marcar_como_concluida(tarefas, indice):
